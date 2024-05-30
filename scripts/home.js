@@ -7,9 +7,13 @@ if(currentUser) {
       modal_login.style.display = 'none';
       welcomemsg.innerText = `welcome ${currentUser.firstName}`;
 }
+else {
+      logoutBtn.style.display = 'none';
+}
 
 // user log out
 logoutBtn.addEventListener('click', ()=>{
       localStorage.removeItem('currentUser');
-      window.location.href = '../pages/login.html';
+      window.location.href = '../index.html';
+      logoutBtn.style.display = 'block';
 })
