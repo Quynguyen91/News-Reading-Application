@@ -23,7 +23,7 @@ const btnLoginHandle = () => {
             }
       }
       else{
-            alert('user khong ton tai');
+            alert('user doesn not exist.');
       }
 }
 
