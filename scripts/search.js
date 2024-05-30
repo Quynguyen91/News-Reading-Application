@@ -1,4 +1,6 @@
 'use strict';
+const pagination = document.querySelector('.pagination');
+const searchBtn = document.getElementById('btn-submit');
 
 if(currentUser) {
 const newsContainer = document.getElementById('news-container');
@@ -6,9 +8,7 @@ const btnNext = document.getElementById('btn-next');
 const btnPrev = document.getElementById('btn-prev');
 const pageNum = document.getElementById('page-num');
 const inputSearch = document.getElementById('input-query');
-const searchBtn = document.getElementById('btn-submit');
 const hiddenBtns = document.querySelector('.pagination');
-const pagination = document.querySelector('.pagination');
 const pageSize = 5;
 let page =1;
 let num_pages;
@@ -132,3 +132,10 @@ function displayNews(data) {
       newsContainer.innerHTML = html;
 }
 }
+else {
+      pagination.style.display = 'none';
+      searchBtn.addEventListener('click', ()=>{
+            alert('You should Sign In/Sign up first.');
+      })
+}
+
